@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="PaqGrupo03.FrontEnd.GestionContenedores">
+  <grid id="27dc6" binding="Contenedores" layout-manager="GridLayoutManager" row-count="25" column-count="32" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="20" left="20" bottom="50" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="1728" height="892"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <component id="ef2ab" class="javax.swing.JLabel" binding="Nidentificacion">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Numero de identificacion"/>
+        </properties>
+      </component>
+      <component id="70aa1" class="javax.swing.JLabel" binding="Peso">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Peso (toneladas)"/>
+        </properties>
+      </component>
+      <component id="727fd" class="javax.swing.JLabel" binding="Contenido">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Descripcion del Contenido"/>
+        </properties>
+      </component>
+      <vspacer id="290da">
+        <constraints>
+          <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <component id="ca3a6" class="javax.swing.JLabel" binding="Empresa">
+        <constraints>
+          <grid row="9" column="0" row-span="3" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Empresa Remitente"/>
+        </properties>
+      </component>
+      <vspacer id="8b7d9">
+        <constraints>
+          <grid row="22" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <hspacer id="fc10">
+        <constraints>
+          <grid row="2" column="31" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="e9152">
+        <constraints>
+          <grid row="1" column="30" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <component id="71a6e" class="javax.swing.JTextField" binding="TxtEmpresa">
+        <constraints>
+          <grid row="9" column="1" row-span="3" col-span="7" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="250" height="-1"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="1b9cc" class="javax.swing.JTextArea" binding="TxtDescr">
+        <constraints>
+          <grid row="5" column="1" row-span="3" col-span="2" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="50"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="782f" class="javax.swing.JTextField" binding="txtNpeso">
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="100" height="-1"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <vspacer id="eff37">
+        <constraints>
+          <grid row="20" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <component id="69d4f" class="javax.swing.JLabel" binding="EmpresaReceptora">
+        <constraints>
+          <grid row="13" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Empresa Receptora"/>
+        </properties>
+      </component>
+      <component id="3ce35" class="javax.swing.JTextField" binding="TxtReceptora">
+        <constraints>
+          <grid row="13" column="1" row-span="1" col-span="7" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="250" height="-1"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <vspacer id="e3502">
+        <constraints>
+          <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <vspacer id="6774">
+        <constraints>
+          <grid row="0" column="25" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <vspacer id="4f024">
+        <constraints>
+          <grid row="24" column="7" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <hspacer id="49f85">
+        <constraints>
+          <grid row="23" column="10" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <component id="bd87d" class="javax.swing.JLabel" binding="Pais">
+        <constraints>
+          <grid row="1" column="19" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Pais de procedencia"/>
+        </properties>
+      </component>
+      <component id="fa65" class="javax.swing.JLabel" binding="Prioridad">
+        <constraints>
+          <grid row="2" column="19" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Prioridad"/>
+        </properties>
+      </component>
+      <component id="5324e" class="javax.swing.JCheckBox" binding="inspeccionadoEnAduanasCheckBox" default-binding="true">
+        <constraints>
+          <grid row="4" column="19" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Inspeccionado en aduanas"/>
+        </properties>
+      </component>
+      <component id="7b31d" class="javax.swing.JComboBox" binding="pais">
+        <constraints>
+          <grid row="1" column="21" row-span="1" col-span="2" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <model>
+            <item value="Albania"/>
+            <item value="Rusia"/>
+            <item value="España"/>
+            <item value="Argentina"/>
+            <item value="Chile"/>
+            <item value="Peru"/>
+            <item value="Argelia"/>
+          </model>
+        </properties>
+      </component>
+      <component id="31acf" class="javax.swing.JRadioButton" binding="a1RadioButton" default-binding="true">
+        <constraints>
+          <grid row="2" column="21" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="1"/>
+        </properties>
+      </component>
+      <component id="bc3f9" class="javax.swing.JRadioButton" binding="a2RadioButton" default-binding="true">
+        <constraints>
+          <grid row="2" column="22" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="2"/>
+        </properties>
+      </component>
+      <component id="98688" class="javax.swing.JRadioButton" binding="a3RadioButton" default-binding="true">
+        <constraints>
+          <grid row="2" column="23" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="3"/>
+        </properties>
+      </component>
+      <vspacer id="f267d">
+        <constraints>
+          <grid row="7" column="7" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <hspacer id="4d242">
+        <constraints>
+          <grid row="2" column="24" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <component id="2d95e" class="javax.swing.JLabel" binding="Estado">
+        <constraints>
+          <grid row="7" column="19" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Estado"/>
+        </properties>
+      </component>
+      <component id="1b67f" class="javax.swing.JTextArea" binding="TxtEstado">
+        <constraints>
+          <grid row="9" column="19" row-span="13" col-span="11" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="50"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="Mostrar datos del hub"/>
+        </properties>
+      </component>
+      <vspacer id="cd939">
+        <constraints>
+          <grid row="14" column="7" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <vspacer id="dca72">
+        <constraints>
+          <grid row="3" column="19" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <component id="a59eb" class="javax.swing.JLabel" binding="Icono">
+        <constraints>
+          <grid row="1" column="31" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <icon value="PaqGrupo03/FrontEnd/Mi proyecto.jpg"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <grid id="6accf" layout-manager="GridLayoutManager" row-count="5" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="16" column="1" row-span="1" col-span="2" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="b8d6c" class="javax.swing.JLabel" binding="operaciones">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Operaciones"/>
+            </properties>
+          </component>
+          <hspacer id="6b3db">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </hspacer>
+          <component id="94672" class="javax.swing.JButton" binding="apilarButton" default-binding="true">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Apilar"/>
+            </properties>
+          </component>
+          <component id="62f22" class="javax.swing.JButton" binding="desapilarButton" default-binding="true">
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Desapilar"/>
+            </properties>
+          </component>
+          <component id="d0e38" class="javax.swing.JTextField" binding="nºDeColumnaTextField" default-binding="true">
+            <constraints>
+              <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <text value="Nº De columna"/>
+            </properties>
+          </component>
+          <component id="25d5a" class="javax.swing.JButton" binding="mostrarDatosContenedorButton" default-binding="true">
+            <constraints>
+              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Mostrar Datos  contenedor"/>
+            </properties>
+          </component>
+          <component id="2a410" class="javax.swing.JTextField" binding="IDContenedorTextField" default-binding="true">
+            <constraints>
+              <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <text value="ID Contenedor"/>
+            </properties>
+          </component>
+          <component id="e59c4" class="javax.swing.JButton" binding="cuantosButton" default-binding="true">
+            <constraints>
+              <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="¿Cuantos?"/>
+            </properties>
+          </component>
+          <component id="23d8b" class="javax.swing.JComboBox" binding="pais2">
+            <constraints>
+              <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <model>
+                <item value="España"/>
+                <item value="Peru"/>
+                <item value="Argelia"/>
+                <item value="Mozambique"/>
+                <item value="Argentina"/>
+                <item value="Portugal"/>
+                <item value="Albania"/>
+              </model>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <vspacer id="99222">
+        <constraints>
+          <grid row="15" column="1" row-span="1" col-span="2" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <component id="c31a5" class="javax.swing.JTextField" binding="TxtNidentificacion">
+        <constraints>
+          <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value=""/>
+        </properties>
+      </component>
+      <hspacer id="b4de">
+        <constraints>
+          <grid row="1" column="6" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="818d6">
+        <constraints>
+          <grid row="2" column="5" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <vspacer id="486eb">
+        <constraints>
+          <grid row="8" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <component id="a16e5" class="javax.swing.JRadioButton" binding="hub2">
+        <constraints>
+          <grid row="18" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Hub2"/>
+        </properties>
+      </component>
+      <component id="76e83" class="javax.swing.JRadioButton" binding="Hub3">
+        <constraints>
+          <grid row="19" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Hub3"/>
+        </properties>
+      </component>
+      <component id="d8308" class="javax.swing.JRadioButton" binding="Hub1">
+        <constraints>
+          <grid row="17" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Hub1"/>
+        </properties>
+      </component>
+      <component id="29001" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="18" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Seleccione Hub"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>
