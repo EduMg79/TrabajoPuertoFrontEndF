@@ -1,6 +1,7 @@
 package PaqGrupo03.FrontEnd;
 
 import PaqC03.Contenedor;
+import PaqC03.Puerto;
 
 import javax.swing.*;
 

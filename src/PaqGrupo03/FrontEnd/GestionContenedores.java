@@ -52,6 +52,7 @@ public class GestionContenedores extends JFrame {
                     a2RadioButton.setEnabled(false);
                     a3RadioButton.setEnabled(false);
                 }
+
                 else {
                     a2RadioButton.setEnabled(true);
                     a3RadioButton.setEnabled(true);
@@ -87,6 +88,7 @@ public class GestionContenedores extends JFrame {
                 }
             }
         });
+
         //CHECK BOX DE INSPECCIONADO EN ADUANAS
 
         inspeccionadoEnAduanasCheckBox.addActionListener(new ActionListener() {
@@ -111,6 +113,7 @@ public class GestionContenedores extends JFrame {
 
                 }
                 else prioridad=3;
+
                 int nhub;
                 if (Hub1.isSelected()){
                     nhub=0;
@@ -125,7 +128,7 @@ public class GestionContenedores extends JFrame {
 
                 int id = Integer.parseInt(TxtNidentificacion.getText());
                 int peso = Integer.parseInt(txtNpeso.getText()); //Controles de entero
-                String s = (String)pais.getSelectedItem();
+                String s = (String) pais.getSelectedItem();
                 Contenedor c1 = new Contenedor( id,peso,s, prioridad, TxtDescr.getText(), TxtEmpresa.getText(), TxtReceptora.getText());
                 if (inspeccionadoEnAduanasCheckBox.isSelected()){
                     c1.setInspeccionado(true);
@@ -147,6 +150,7 @@ public class GestionContenedores extends JFrame {
 
 
                 TxtEstado.setText(p.toString(nhub));
+
                 FileOutputStream fos = null;
                 ObjectOutputStream salida = null;
                 try {
@@ -207,6 +211,7 @@ public class GestionContenedores extends JFrame {
                     JOptionPane.showMessageDialog(null,"El dato no es un entero, vuelve a teclearlo");
                 }
             }
+
         });
 
         txtNpeso.addActionListener(new ActionListener() {
@@ -237,6 +242,7 @@ public class GestionContenedores extends JFrame {
                     nhub=3;
                 }
                 int id=Integer.parseInt(IDContenedorTextField.getText()); //Control de entero
+
 
                 Contenedores2 contenedores2= new Contenedores2(p.muestraDatosid(nhub,id)); //paso por parametro de el contenedor de la id pasada por teclado
             }
