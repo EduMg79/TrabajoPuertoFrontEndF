@@ -105,51 +105,41 @@ public class GestionContenedores extends JFrame {
         apilarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                int prioridad;
-                if (a1RadioButton.isSelected()){
-                    prioridad=1;
-                } else if (a2RadioButton.isSelected()) {
-                    prioridad=2;
+             int prioridad;
+             int nhub;
+             if (a1RadioButton.isSelected()){
+                 prioridad=1;
+             }
+             else if (a2RadioButton.isSelected()){
+                 prioridad=2;
+             }
+             else prioridad=3;
+             if (Hub1.isSelected()){
+                 nhub=0;
+             } else if (hub2.isSelected()) {
+                 nhub=1;
 
-                }
-                else prioridad=3;
+             }
+             else nhub=2;
+             int id=Integer.parseInt(TxtNidentificacion.getText());
+             int peso=Integer.parseInt(txtNpeso.getText());
+             String pa= (String) pais.getSelectedItem();
+             Contenedor aux=new Contenedor(id,peso,pa,prioridad,TxtDescr.getText(),TxtEmpresa.getText(),TxtReceptora.getText());
+             p.apilar(aux,nhub);
 
-                int nhub;
-                if (Hub1.isSelected()){
-                    nhub=0;
-                } else if (hub2.isSelected()) {
-                    nhub=1;
-
-                } else  {
-                    nhub=2;
-                }
-
-
-
-                int id = Integer.parseInt(TxtNidentificacion.getText());
-                int peso = Integer.parseInt(txtNpeso.getText()); //Controles de entero
-                String s = (String) pais.getSelectedItem();
-                Contenedor c1 = new Contenedor( id,peso,s, prioridad, TxtDescr.getText(), TxtEmpresa.getText(), TxtReceptora.getText());
-                if (inspeccionadoEnAduanasCheckBox.isSelected()){
-                    c1.setInspeccionado(true);
-                }
-                else c1.setInspeccionado(false);
-
-                p.apilar(c1,nhub);
-                if (p.ocupadocolumna(nhub)){
-                    JOptionPane.showMessageDialog(null,"No hay espacio");
-                }
-                else if (p.ocupadocolumna2(nhub)){
-                    JOptionPane.showMessageDialog(null,"No hay espacio");
-
-                }
-                else {
-                    JOptionPane.showMessageDialog(null,"Has apilado un contenedor");
-                }
-
-
-
-                TxtEstado.setText(p.toString(nhub));
+             if (p.ocupadocolumna(nhub)){
+                 JOptionPane.showMessageDialog(null,"No hay espacio");
+             }
+             if (p.ocupadocolumna2(nhub)){
+                 JOptionPane.showMessageDialog(null,"No hay espacio");
+             }
+             if (p.Ocupado(nhub)){
+                 JOptionPane.showMessageDialog(null,"No hay espacio");
+             }
+             else {
+                 JOptionPane.showMessageDialog(null,"Has apilado el contenedor");
+             }
+             TxtEstado.setText(p.toString(nhub));
 
                 FileOutputStream fos = null;
                 ObjectOutputStream salida = null;
@@ -183,7 +173,9 @@ public class GestionContenedores extends JFrame {
                     } else nhub=2;
 
                     p.desapilar(nhub,Integer.parseInt(nºDeColumnaTextField.getText()));
+                    TxtEstado.setText(p.toString(nhub));
                     JOptionPane.showMessageDialog(null,"Has desapilado un contenedor");
+
 
                 FileOutputStream fos = null;
                 ObjectOutputStream salida = null;
@@ -248,6 +240,7 @@ public class GestionContenedores extends JFrame {
             }
         });
         //BOTONES DE HUB
+
 
         Hub1.addActionListener(new ActionListener() {
             @Override

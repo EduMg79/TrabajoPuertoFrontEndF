@@ -45,6 +45,7 @@ public class Contenedores2 extends JFrame {
         }
         else a3RadioButton.setSelected(true);
 
+
     }
 
 
