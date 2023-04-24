@@ -15,17 +15,17 @@ import java.io.ObjectOutputStream;
 
 public class GestionContenedores extends JFrame {
 
-    public GestionContenedores(){
+    public GestionContenedores() {
         setTitle("Contenedores ");
-        setSize(800,600);
+        setSize(800, 600);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
         setContentPane(Contenedores);
-        Contenedores.setBorder(BorderFactory.createEmptyBorder(15,15,15,15));
+        Contenedores.setBorder(BorderFactory.createEmptyBorder(15, 15, 15, 15));
 
         try {
-           FileInputStream fis = new FileInputStream("puerto.dat");
-          ObjectInputStream  entrada = new ObjectInputStream(fis);
+            FileInputStream fis = new FileInputStream("puerto.dat");
+            ObjectInputStream entrada = new ObjectInputStream(fis);
             p = (Puerto) entrada.readObject(); //es necesario el casting
             fis.close(); // no es obligatorio pero es recomendable
             entrada.close(); // no es obligatorio pero es recomendable
@@ -35,7 +35,7 @@ public class GestionContenedores extends JFrame {
 
         }
 
-        Hub h=new Hub();
+        Hub h = new Hub();
         TxtEmpresa.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -47,13 +47,11 @@ public class GestionContenedores extends JFrame {
         a1RadioButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (a1RadioButton.isSelected()){
-                    JOptionPane.showMessageDialog(null,"Has seleccionado prioridad 1");
+                if (a1RadioButton.isSelected()) {
+                    JOptionPane.showMessageDialog(null, "Has seleccionado prioridad 1");
                     a2RadioButton.setEnabled(false);
                     a3RadioButton.setEnabled(false);
-                }
-
-                else {
+                } else {
                     a2RadioButton.setEnabled(true);
                     a3RadioButton.setEnabled(true);
                 }
@@ -62,12 +60,11 @@ public class GestionContenedores extends JFrame {
         a2RadioButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (a2RadioButton.isSelected()){
-                    JOptionPane.showMessageDialog(null,"Has seleccionado prioridad 2");
+                if (a2RadioButton.isSelected()) {
+                    JOptionPane.showMessageDialog(null, "Has seleccionado prioridad 2");
                     a1RadioButton.setEnabled(false);
                     a3RadioButton.setEnabled(false);
-                }
-                else {
+                } else {
                     a1RadioButton.setEnabled(true);
                     a3RadioButton.setEnabled(true);
                 }
@@ -77,12 +74,11 @@ public class GestionContenedores extends JFrame {
         a3RadioButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (a3RadioButton.isSelected()){
-                    JOptionPane.showMessageDialog(null,"Has seleccionado prioridad 3");
+                if (a3RadioButton.isSelected()) {
+                    JOptionPane.showMessageDialog(null, "Has seleccionado prioridad 3");
                     a1RadioButton.setEnabled(false);
                     a2RadioButton.setEnabled(false);
-                }
-                else {
+                } else {
                     a2RadioButton.setEnabled(true);
                     a1RadioButton.setEnabled(true);
                 }
@@ -94,8 +90,8 @@ public class GestionContenedores extends JFrame {
         inspeccionadoEnAduanasCheckBox.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (inspeccionadoEnAduanasCheckBox.isSelected()){
-                    JOptionPane.showMessageDialog(null,"el contenedor esta inspeccionado en aduanas");
+                if (inspeccionadoEnAduanasCheckBox.isSelected()) {
+                    JOptionPane.showMessageDialog(null, "el contenedor esta inspeccionado en aduanas");
 
                 }
 
@@ -105,41 +101,40 @@ public class GestionContenedores extends JFrame {
         apilarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-             int prioridad;
-             int nhub;
-             if (a1RadioButton.isSelected()){
-                 prioridad=1;
-             }
-             else if (a2RadioButton.isSelected()){
-                 prioridad=2;
-             }
-             else prioridad=3;
-             if (Hub1.isSelected()){
-                 nhub=0;
-             } else if (hub2.isSelected()) {
-                 nhub=1;
+                int prioridad;
+                int nhub;
+                if (a1RadioButton.isSelected()) {
+                    prioridad = 1;
+                } else if (a2RadioButton.isSelected()) {
+                    prioridad = 2;
+                } else prioridad = 3;
+                if (Hub1.isSelected()) {
+                    nhub = 0;
+                } else if (hub2.isSelected()) {
+                    nhub = 1;
 
-             }
-             else nhub=2;
-             int id=Integer.parseInt(TxtNidentificacion.getText());
-             int peso=Integer.parseInt(txtNpeso.getText());
-             String pa= (String) pais.getSelectedItem();
-             Contenedor aux=new Contenedor(id,peso,pa,prioridad,TxtDescr.getText(),TxtEmpresa.getText(),TxtReceptora.getText());
-             p.apilar(aux,nhub);
+                } else nhub = 2;
+                int id = Integer.parseInt(TxtNidentificacion.getText());
+                int peso = Integer.parseInt(txtNpeso.getText());
+                String pa = (String) pais.getSelectedItem();
+                Contenedor aux = new Contenedor(id, peso, pa, prioridad, TxtDescr.getText(), TxtEmpresa.getText(), TxtReceptora.getText());
+                p.apilar(aux, nhub);
 
-             if (p.ocupadocolumna(nhub)){
-                 JOptionPane.showMessageDialog(null,"No hay espacio");
-             }
-             if (p.ocupadocolumna2(nhub)){
-                 JOptionPane.showMessageDialog(null,"No hay espacio");
-             }
-             if (p.Ocupado(nhub)){
-                 JOptionPane.showMessageDialog(null,"No hay espacio");
-             }
-             else {
-                 JOptionPane.showMessageDialog(null,"Has apilado el contenedor");
-             }
-             TxtEstado.setText(p.toString(nhub));
+                if (p.ocupadocolumna(nhub)) {
+                    JOptionPane.showMessageDialog(null, "No hay espacio");
+                }
+                if (p.ocupadocolumna2(nhub)) {
+                    JOptionPane.showMessageDialog(null, "No hay espacio");
+                }
+                if (p.Ocupado(nhub)) {
+                    JOptionPane.showMessageDialog(null, "No hay espacio");
+                } else {
+                    JOptionPane.showMessageDialog(null, "Has apilado el contenedor");
+                }
+                if (inspeccionadoEnAduanasCheckBox.isSelected()){
+                    aux.setInspeccionado(true);
+                }
+                TxtEstado.setText(p.toString(nhub));
 
                 FileOutputStream fos = null;
                 ObjectOutputStream salida = null;
@@ -155,7 +150,6 @@ public class GestionContenedores extends JFrame {
                 }
 
 
-
             }
         });
         //DESAPILAR CONTENEDOR
@@ -165,16 +159,16 @@ public class GestionContenedores extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 int nhub;
 
-                    if (Hub1.isSelected()){
-                        nhub=0;
-                    } else if (hub2.isSelected()) {
-                        nhub=1;
+                if (Hub1.isSelected()) {
+                    nhub = 0;
+                } else if (hub2.isSelected()) {
+                    nhub = 1;
 
-                    } else nhub=2;
+                } else nhub = 2;
 
-                    p.desapilar(nhub,Integer.parseInt(nºDeColumnaTextField.getText()));
-                    TxtEstado.setText(p.toString(nhub));
-                    JOptionPane.showMessageDialog(null,"Has desapilado un contenedor");
+                p.desapilar(nhub, Integer.parseInt(nºDeColumnaTextField.getText()));
+                TxtEstado.setText(p.toString(nhub));
+                JOptionPane.showMessageDialog(null, "Has desapilado un contenedor");
 
 
                 FileOutputStream fos = null;
@@ -199,8 +193,8 @@ public class GestionContenedores extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 try {
                     int dato = Integer.parseInt(TxtNidentificacion.getText());
-                }catch(NumberFormatException ex){
-                    JOptionPane.showMessageDialog(null,"El dato no es un entero, vuelve a teclearlo");
+                } catch (NumberFormatException ex) {
+                    JOptionPane.showMessageDialog(null, "El dato no es un entero, vuelve a teclearlo");
                 }
             }
 
@@ -211,8 +205,8 @@ public class GestionContenedores extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 try {
                     double dato = Double.parseDouble(txtNpeso.getText());
-                }catch(NumberFormatException ex){
-                    JOptionPane.showMessageDialog(null,"El dato no es un entero o doble, vuelve a teclearlo");
+                } catch (NumberFormatException ex) {
+                    JOptionPane.showMessageDialog(null, "El dato no es un entero o doble, vuelve a teclearlo");
                 }
             }
         });
@@ -221,22 +215,19 @@ public class GestionContenedores extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 int nhub;
-                if(Hub1.isSelected()){
-                    nhub=0;
+                if (Hub1.isSelected()) {
+                    nhub = 0;
+                } else if (hub2.isSelected()) {
+                    nhub = 1;
+                } else if (Hub3.isSelected()) {
+                    nhub = 2;
+                } else {
+                    nhub = 3;
                 }
-                else if(hub2.isSelected()){
-                    nhub=1;
-                }
-                else if (Hub3.isSelected()){
-                    nhub=2;
-                }
-                else{
-                    nhub=3;
-                }
-                int id=Integer.parseInt(IDContenedorTextField.getText()); //Control de entero
+                int id = Integer.parseInt(IDContenedorTextField.getText()); //Control de entero
 
 
-                Contenedores2 contenedores2= new Contenedores2(p.muestraDatosid(nhub,id)); //paso por parametro de el contenedor de la id pasada por teclado
+                Contenedores2 contenedores2 = new Contenedores2(p.muestraDatosid(nhub, id)); //paso por parametro de el contenedor de la id pasada por teclado
             }
         });
         //BOTONES DE HUB
@@ -245,13 +236,12 @@ public class GestionContenedores extends JFrame {
         Hub1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (Hub1.isSelected()){
+                if (Hub1.isSelected()) {
                     hub2.setEnabled(false);
                     Hub3.setEnabled(false);
                     TxtEstado.setText(p.toString(0)); //Cada vez que se pulse el boton del hub se muestra el estado del hub del puerto
-                    JOptionPane.showMessageDialog(null,"Has seleccionado el Hub 1");
-                }
-                else{
+                    JOptionPane.showMessageDialog(null, "Has seleccionado el Hub 1");
+                } else {
                     hub2.setEnabled(true);
                     Hub3.setEnabled(true);
                 }
@@ -261,13 +251,12 @@ public class GestionContenedores extends JFrame {
         hub2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (hub2.isSelected()){
+                if (hub2.isSelected()) {
                     Hub1.setEnabled(false);
                     Hub3.setEnabled(false);
                     TxtEstado.setText(p.toString(1));
-                    JOptionPane.showMessageDialog(null,"Has seleccionado el Hub 2");
-                }
-                else{
+                    JOptionPane.showMessageDialog(null, "Has seleccionado el Hub 2");
+                } else {
                     Hub1.setEnabled(true);
                     Hub3.setEnabled(true);
                 }
@@ -279,13 +268,12 @@ public class GestionContenedores extends JFrame {
         Hub3.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (Hub3.isSelected()){
+                if (Hub3.isSelected()) {
                     hub2.setEnabled(false);
                     Hub1.setEnabled(false);
                     TxtEstado.setText(p.toString(2));
-                    JOptionPane.showMessageDialog(null,"Has seleccionado el Hub 3");
-                }
-                else{
+                    JOptionPane.showMessageDialog(null, "Has seleccionado el Hub 3");
+                } else {
                     hub2.setEnabled(true);
                     Hub1.setEnabled(true);
                 }
@@ -295,23 +283,26 @@ public class GestionContenedores extends JFrame {
 
         });
 
+        //CUANTOS
 
         cuantosButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 int nhub;
-                if (Hub1.isSelected()){
-                    nhub=0;
+                if (Hub1.isSelected()) {
+                    nhub = 0;
                 } else if (hub2.isSelected()) {
-                    nhub=1;
-                }
-                else nhub=2;
+                    nhub = 1;
+                } else nhub = 2;
 
-                String s = (String)pais2.getSelectedItem();
-                JOptionPane.showMessageDialog(null,"Hay "+(p.ContadorPaises(s,nhub))+" contenedores de "+s);
+                String s = (String) pais2.getSelectedItem();
+                JOptionPane.showMessageDialog(null, "Hay " + (p.ContadorPaises(s, nhub)) + " contenedores de " + s);
             }
 
+
         });
+
+
 
     }
 
